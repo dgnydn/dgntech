@@ -19,9 +19,11 @@ const Home: NextPage = () => {
           title: 'DGNTECH - Doğan Aydın - Senior Developer',
           description: "Web development, mobile development, and design. I'm a senior developer with 15+ years of experience.",
           images: [
-            { url: 'https://www.dgntech.co/og.png' },
+            { url: 'https://www.dgntech.co/og.png', width: 1366, height: 666, alt: 'DGNTECH - Doğan Aydın - Senior Developer', secureUrl: 'https://www.dgntech.co/og.png', type: 'image/png' }
           ],
           siteName: 'DGNTECH - Doğan Aydın - Senior Developer',
+          locale: 'en_US',
+          type: 'website'
         }}
         twitter={{
           handle: '@dgntech',
