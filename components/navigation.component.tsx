@@ -21,7 +21,7 @@ export default function NagivationComponent() {
           </Link>
         </li>
         <li>
-          <Link href="https://twitter.com/dgntech">
+          <Link href="https://twitter.com/dgntechco">
             <a>Twitter</a>
           </Link>
         </li>
