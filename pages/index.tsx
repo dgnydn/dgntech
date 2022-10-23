@@ -28,7 +28,7 @@ const Home: NextPage = () => {
         twitter={{
           handle: '@dgntech',
           site: '@dgntech',
-          cardType: 'summary_large_image',
+          cardType: 'summary_large_image'
         }}
       />
       <div className='w-full flex flex-col md:flex-row min-h-screen mx-center justify-center md:space-x-6 items-center'>
