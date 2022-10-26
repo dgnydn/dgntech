@@ -7,8 +7,24 @@ import LayoutComponent from '../components/layout.component'
 import WorksComponent from '../components/works.component'
 import { NextSeo } from 'next-seo';
 import ExperienceComponent from '../components/experience.component'
+import { useEffect } from 'react'
 
 const Home: NextPage = () => {
+  useEffect(() => {
+    const profileBg = document.querySelector('#profileBg') as HTMLElement;
+    profileBg.classList.add("transition");
+    let deg: number = 0;
+    setInterval(() => {
+      profileBg.style.transform = `rotate(${deg}deg)`;
+      if (deg >= 360) {
+        deg = 0;
+      }
+      else {
+        deg += 1;
+      }
+    }, 1);
+  })
+
   return (
     <LayoutComponent>
       <NextSeo
@@ -33,8 +49,9 @@ const Home: NextPage = () => {
         }}
       />
       <div className='w-full flex flex-col md:flex-row min-h-screen mx-center justify-center md:space-x-6 items-center'>
-        <div className='mx-10 md:mx-0'>
-          <Image src="/profile.jpg" alt='Profile picture of me' width={400} height={400} className='rounded-full grayscale shadow-md hover:grayscale-0' />
+        <div className="relative mx-10 md:mx-0 flex items-center justify-center">
+          <div className="h-96 w-96 bg-gradient-to-r from-orange-500 via-red-500 to-rose-600 max-w-6xl -z-10 rounded-full absolute" id='profileBg'></div>
+          <div className='bg-[url(/profile.jpg)] w-96 h-96 scale-95 bg-cover bg-center rounded-full'></div>
         </div>
         <div className='w-full md:w-1/2'>
           <h1 className="text-6xl font-bold text-gray-200 mb-2 pb-2 text-center md:text-left">Hello, I'm Doğan</h1>
